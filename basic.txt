@@ -1,0 +1,7 @@
+you can select item and then find uska id and class kya h 
+like this - 
+document.getElementById('title').id , iss se tum title ka id dekh satke ho
+but like this -document.getElementById('title').class - ye undefined dikhayega , so tum aese class nhi dekh sakte 
+but this will work - document.getElementById('title').ClassName 
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('id')

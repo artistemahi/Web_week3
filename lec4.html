@@ -1,0 +1,45 @@
+<!--create new element by using function and  edit them-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color:black; color: white;">
+    <li class="language">
+        Javascript
+    </li>
+</body>
+<script>
+    function addlang (langName) {
+     const li =document.createElement('li')
+        li.innerHTML=`${langName}`  // here because of the innerHTML whole tree is traversed
+        document.querySelector('.language').appendChild(li)
+    }
+    addlang("python")
+    /* by making the optimized function*/
+    function optiaddlang (langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    optiaddlang("typescript")
+
+    // editing the values
+
+    const firstlang=document.querySelector("li:nth-child(1)");
+    console.log(firstlang);
+    // firstlang.innerHTML="mojo"; // it will change the inner html of li (including all tags)
+    // fistlang.outerHTMl='<li>hello</li>'  it will change whole inner html
+
+    // const newli = document.createElement('li');
+    // newli.textContent="mojo"
+    // firstlang.replaceWith(newli)
+
+    // remove
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove();
+</script>
+
+</html>

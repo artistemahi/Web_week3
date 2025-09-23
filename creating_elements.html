@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+        <div>Sunday</div>
+    </div>
+    <script>
+      const newElement=document.createElement('div');
+      document.body.appendChild(newElement);
+    //   newElement.innerHTML='this is new element in div tag';
+      
+      newElement.className='x'
+      newElement.id='y'
+      console.log(newElement)
+      newElement.setAttribute('title',"generated titile")
+      newElement.style.padding="12px";
+    const addtext= document.createTextNode("HEY")
+ newElement.appendChild(addtext)
+      
+    </script>
+</body>
+</html>
